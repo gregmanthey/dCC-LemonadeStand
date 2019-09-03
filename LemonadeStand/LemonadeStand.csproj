@@ -49,6 +49,7 @@
     <Compile Include="Game.cs" />
     <Compile Include="Human.cs" />
     <Compile Include="Inventory.cs" />
+    <Compile Include="MilwaukeeWeather.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -59,7 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
+    <None Include="LemonadeStandClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

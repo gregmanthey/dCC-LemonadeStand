@@ -7,6 +7,8 @@ namespace LemonadeStand
 {
   public class UserInterface
   {
+    private Validation inputValidation;
+
     public Validation Validation
     {
       get => default;

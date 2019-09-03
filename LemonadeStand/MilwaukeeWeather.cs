@@ -5,9 +5,8 @@ using System.Text;
 
 namespace LemonadeStand
 {
-  public abstract class Weather
+  public class MilwaukeeWeather : Weather
   {
-    private short temperature;
-    private string condition;
+    private const string ZIP = 53203;
   }
 }
