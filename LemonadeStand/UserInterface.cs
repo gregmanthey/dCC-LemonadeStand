@@ -37,5 +37,18 @@ namespace LemonadeStand
     {
       throw new System.NotImplementedException();
     }
+    public static string SetName(string context)
+    {
+      return ReadLineFor($"Please enter a name for {context}:", Validation.AlphabetCharacters);
+    }
+    public static string ReadLineFor(string context, Func<string, bool> valid)
+    {
+      string userInput;
+      do
+      {
+        Console.WriteLine(context);
+        userInput = Console.ReadLine().Trim();
+      } while (userInput == null || userInput == "" || !valid(userInput));
+    }
   }
 }
