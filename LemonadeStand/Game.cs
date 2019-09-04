@@ -8,39 +8,17 @@ namespace LemonadeStand
   public class Game
   {
     private string standName;
-    private Player playerOne;
-    private Day currentDay;
+    public Player Player;
+    public Day Day;
+    public UserInterface UI;
+    public Store Store;
 
-    public Player Player
+    public void RunGame()
     {
-      get => default;
-      set
-      {
-      }
-    }
+      UI.DisplayTitleScreen();
+      UI.DisplayLore();
+      UI.DisplayRules();
 
-    public Day Day
-    {
-      get => default;
-      set
-      {
-      }
-    }
-
-    public UserInterface UserInterface
-    {
-      get => default;
-      set
-      {
-      }
-    }
-
-    public Store Store
-    {
-      get => default;
-      set
-      {
-      }
     }
   }
 }

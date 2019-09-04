@@ -7,15 +7,8 @@ namespace LemonadeStand
 {
   public class UserInterface
   {
-    private Validation inputValidation;
 
-    public Validation Validation
-    {
-      get => default;
-      set
-      {
-      }
-    }
+    public Validation Validation;
 
     public void DisplayLore()
     {
@@ -33,6 +26,11 @@ namespace LemonadeStand
     }
 
     public void GetInput()
+    {
+      throw new System.NotImplementedException();
+    }
+
+    public void DisplayTitleScreen()
     {
       throw new System.NotImplementedException();
     }

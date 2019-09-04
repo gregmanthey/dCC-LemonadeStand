@@ -12,22 +12,22 @@ namespace LemonadeStand
     private float[] pricesOfSugar;
     private float[] pricesOfIce;
 
-    public float BuyCups(int amount)
+    public float SellCups(int amount)
     {
       throw new System.NotImplementedException();
     }
 
-    public float BuyIce(int amount)
+    public float SellIce(int amount)
     {
       throw new System.NotImplementedException();
     }
 
-    public float BuyLemons(int amount)
+    public float SellLemons(int amount)
     {
       throw new System.NotImplementedException();
     }
 
-    public float BuySugar(int amount)
+    public float SellSugar(int amount)
     {
       throw new System.NotImplementedException();
     }

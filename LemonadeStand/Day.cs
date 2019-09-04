@@ -8,20 +8,8 @@ namespace LemonadeStand
   public class Day
   {
 
-    public Weather Weather
-    {
-      get => default;
-      set
-      {
-      }
-    }
+    public Weather Weather;
 
-    public Customer Customer
-    {
-      get => default;
-      set
-      {
-      }
-    }
+    public Customer Customer;
   }
 }

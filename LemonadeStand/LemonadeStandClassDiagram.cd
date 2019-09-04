@@ -3,14 +3,14 @@
   <Class Name="LemonadeStand.Game">
     <Position X="5" Y="0.5" Width="3.5" />
     <TypeIdentifier>
-      <HashCode>EAAAAAAAIAAAAAAAAAAAAAAACAAAgAAAAAAEAQAAAAA=</HashCode>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAgAAAAAQAAQAAEAA=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Player" />
-      <Property Name="Day" />
-      <Property Name="UserInterface" />
-      <Property Name="Store" />
+      <Field Name="UI" />
+      <Field Name="Store" />
+      <Field Name="Player" />
+      <Field Name="Day" />
     </ShowAsAssociation>
   </Class>
   <Class Name="LemonadeStand.Player">
@@ -20,7 +20,7 @@
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Inventory" />
+      <Field Name="Inventory" />
     </ShowAsAssociation>
   </Class>
   <Class Name="LemonadeStand.Human">
@@ -47,7 +47,7 @@
   <Class Name="LemonadeStand.Store">
     <Position X="6" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAACCQAAAAAAAAAAAAQAAAAAAAAAAAAABECAgA=</HashCode>
       <FileName>Store.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -58,8 +58,8 @@
       <FileName>Day.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Weather" />
-      <Property Name="Customer" />
+      <Field Name="Weather" />
+      <Field Name="Customer" />
     </ShowAsAssociation>
   </Class>
   <Class Name="LemonadeStand.Weather">
@@ -72,11 +72,11 @@
   <Class Name="LemonadeStand.UserInterface">
     <Position X="2.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QQAAAAAAAAAAAIAAACAAAAAAAACAAAAgAAAAAAAAAAA=</HashCode>
+      <HashCode>AQAAAAAAAAAAAIAAACAAAAAAAACAAAAgAQAAAAAAAAA=</HashCode>
       <FileName>UserInterface.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Validation" />
+      <Field Name="Validation" />
     </ShowAsAssociation>
   </Class>
   <Class Name="LemonadeStand.Customer">

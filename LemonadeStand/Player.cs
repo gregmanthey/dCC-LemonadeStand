@@ -10,12 +10,6 @@ namespace LemonadeStand
     private Inventory inventory;
     private string name;
 
-    public Inventory Inventory
-    {
-      get => default;
-      set
-      {
-      }
-    }
+    public Inventory Inventory;
   }
 }
