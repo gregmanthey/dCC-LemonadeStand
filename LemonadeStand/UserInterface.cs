@@ -25,7 +25,9 @@ namespace LemonadeStand
 
     public static void DisplayTitleScreen()
     {
-      throw new System.NotImplementedException();
+      Console.WriteLine("Welcome to Lemonade Stand Simulator 2020!");
+      Console.WriteLine("Known by many to be the definitive version of the game.");
+      Console.WriteLine("...\n...\n...or not. I leave that up to you to decide.");
     }
 
     public static byte SetGameLengthInDays()
