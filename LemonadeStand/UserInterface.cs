@@ -28,7 +28,7 @@ namespace LemonadeStand
       throw new System.NotImplementedException();
     }
 
-    public static byte SetGameLength()
+    public static byte SetGameLengthInDays()
     {
       throw new System.NotImplementedException();
     }

@@ -7,29 +7,27 @@ namespace LemonadeStand
 {
   public class Store
   {
-    private float[] pricesOfCups;
-    private float[] pricesOfLemons;
-    private float[] pricesOfSugar;
-    private float[] pricesOfIce;
+    private double[] pricesOfCups;
+    private double[] pricesOfLemons;
+    private double[] pricesOfSugar;
+    private double[] pricesOfIce;
 
-    public float SellCups(int amount)
+    public void SellItems(string item, int amount, Player player)
     {
-      throw new System.NotImplementedException();
-    }
-
-    public float SellIce(int amount)
-    {
-      throw new System.NotImplementedException();
-    }
-
-    public float SellLemons(int amount)
-    {
-      throw new System.NotImplementedException();
-    }
-
-    public float SellSugar(int amount)
-    {
-      throw new System.NotImplementedException();
+      switch (item)
+      {
+        case "cups":
+          //player.inventory.cups += amount;
+          break;
+        case "lemons":
+          break;
+        case "sugar":
+          break;
+        case "ice":
+          break;
+        default:
+          break;
+      }
     }
   }
 }

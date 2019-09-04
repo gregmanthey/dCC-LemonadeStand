@@ -7,11 +7,11 @@ namespace LemonadeStand
 {
   public class Inventory
   {
-    private float money;
-    private ushort cups;
-    private ushort lemons;
-    private ushort sugar;
-    private ushort ice;
+    public double money;
+    public ushort cups;
+    public ushort lemons;
+    public ushort sugar;
+    public ushort ice;
 
     public Inventory()
     {

@@ -11,5 +11,15 @@ namespace LemonadeStand
     public Inventory inventory;
     private string standName;
     public Recipe recipe;
+
+    public Player()
+    {
+      inventory = new Inventory();
+      recipe = new Recipe();
+      SetName();
+      SetStandName();
+    }
+    public abstract void SetName();
+    public abstract void SetStandName();
   }
 }
