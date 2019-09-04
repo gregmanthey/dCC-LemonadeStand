@@ -7,9 +7,9 @@ namespace LemonadeStand
 {
   public abstract class Player
   {
-    private Inventory inventory;
     private string name;
-
-    public Inventory Inventory;
+    public Inventory inventory;
+    private string standName;
+    public Recipe recipe;
   }
 }

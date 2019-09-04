@@ -8,8 +8,6 @@ namespace LemonadeStand
   public static class UI
   {
 
-    public Validation Validation;
-
     public static void DisplayLore()
     {
       throw new System.NotImplementedException();

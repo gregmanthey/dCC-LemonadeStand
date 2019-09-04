@@ -8,23 +8,23 @@ namespace LemonadeStand
   public class Game
   {
     private string standName;
-    public Player Player;
+    public Player player;
     public Day currentDay;
-    public Store Store;
+    public Store lemonadeEmporium;
 
     public void RunGame()
     {
       UI.DisplayTitleScreen();
       UI.DisplayLore();
       UI.DisplayRules();
-      //TODO: UI.GetNumberofPlayers(), UI.SetGameMode() 
+      //TODO: UI.SetStandName(), UI.GetNumberofPlayers(), UI.SetGameMode() 
       byte numberOfDays = UI.SetGameLength();
       for (byte i = 0; i < numberOfDays; i++)
       {
         UI.DisplayInventory();
-        //TODO: Player buys from store
+        //TODO: Player buys from store lemonadeEmporium.
         //TODO: Player sets recipe
-        //TODO: Day happens
+        currentDay.RunDay(player, i);
         //TODO: Display day results and cumulative results
       }
     }

@@ -13,7 +13,7 @@ namespace LemonadeStand
     public Customer Customer;
     private DateTime date;
 
-    public void RunDay(Player player)
+    public void RunDay(Player player, byte day)
     {
       
     }
