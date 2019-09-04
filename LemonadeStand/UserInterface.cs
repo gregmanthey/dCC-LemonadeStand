@@ -49,6 +49,7 @@ namespace LemonadeStand
         Console.WriteLine(context);
         userInput = Console.ReadLine().Trim();
       } while (userInput == null || userInput == "" || !valid(userInput));
+      return userInput;
     }
   }
 }
