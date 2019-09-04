@@ -30,7 +30,13 @@ namespace LemonadeStand
 
     public static byte SetGameLengthInDays()
     {
-      throw new System.NotImplementedException();
+      byte userInput = byte.Parse(ReadLineFor("How many days do you want to simulate (up to 10)?", Validation.NumericCharacters));
+      while (userInput < 1 || userInput > 10)
+      {
+        Console.WriteLine("Please enter a valid input from 1 to 10.");
+        return SetGameLengthInDays();
+      }
+      return userInput;
     }
 
     public static void DisplayInventory()
