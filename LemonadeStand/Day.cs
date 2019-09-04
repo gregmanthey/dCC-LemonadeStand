@@ -11,5 +11,11 @@ namespace LemonadeStand
     public Weather Weather;
 
     public Customer Customer;
+    private DateTime date;
+
+    public void RunDay(Player player)
+    {
+      
+    }
   }
 }

@@ -5,32 +5,37 @@ using System.Text;
 
 namespace LemonadeStand
 {
-  public class UserInterface
+  public static class UI
   {
 
     public Validation Validation;
 
-    public void DisplayLore()
+    public static void DisplayLore()
     {
       throw new System.NotImplementedException();
     }
 
-    public void DisplayRules()
+    public static void DisplayRules()
     {
       throw new System.NotImplementedException();
     }
 
-    public void DisplayStatus()
+    public static void DisplayStatus()
     {
       throw new System.NotImplementedException();
     }
 
-    public void GetInput()
+    public static void DisplayTitleScreen()
     {
       throw new System.NotImplementedException();
     }
 
-    public void DisplayTitleScreen()
+    public static byte SetGameLength()
+    {
+      throw new System.NotImplementedException();
+    }
+
+    public static void DisplayInventory()
     {
       throw new System.NotImplementedException();
     }

@@ -3,14 +3,13 @@
   <Class Name="LemonadeStand.Game">
     <Position X="5" Y="0.5" Width="3.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAgAAAAAQAAQAAEAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAQEAQAAAAA=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="UI" />
       <Field Name="Store" />
       <Field Name="Player" />
-      <Field Name="Day" />
+      <Field Name="currentDay" />
     </ShowAsAssociation>
   </Class>
   <Class Name="LemonadeStand.Player">
@@ -54,7 +53,7 @@
   <Class Name="LemonadeStand.Day">
     <Position X="9.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <HashCode>AAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAQAAAAAQAAAAA=</HashCode>
       <FileName>Day.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -69,10 +68,10 @@
       <FileName>Weather.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="LemonadeStand.UserInterface">
+  <Class Name="LemonadeStand.UI">
     <Position X="2.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQAAAAAAAAAAAIAAACAAAAAAAACAAAAgAQAAAAAAAAA=</HashCode>
+      <HashCode>AAAAEAAAAAAEAIAAACAAAAAAAACAAAAgAQAAAAAAAAA=</HashCode>
       <FileName>UserInterface.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
