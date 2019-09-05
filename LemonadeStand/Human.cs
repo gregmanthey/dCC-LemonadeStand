@@ -7,14 +7,21 @@ namespace LemonadeStand
 {
   public class Human : Player
   {
+    public override void ChangeRecipe()
+    {
+      throw new NotImplementedException();
+    }
+
     public override void SetName()
     {
-      name = UI.SetName("the player");
+      string context = "the player";
+      name = UI.SetName(context);
     }
 
     public override void SetStandName()
     {
-      standName = UI.SetName($"{name}'s lemonade stand");
+      string context = $"{name}'s lemonade stand";
+      standName = UI.SetName(context);
     }
   }
 }

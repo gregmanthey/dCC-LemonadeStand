@@ -19,6 +19,7 @@ namespace LemonadeStand
       SetName();
       SetStandName();
     }
+    public abstract void ChangeRecipe();
     public abstract void SetName();
     public abstract void SetStandName();
   }
