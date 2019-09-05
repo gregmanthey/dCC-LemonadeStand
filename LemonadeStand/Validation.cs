@@ -38,5 +38,14 @@ namespace LemonadeStand
       Console.WriteLine("Invalid input. Please enter only a number.");
       return false;
     }
+    public static bool YesNo(string input)
+    {
+      if (input.ToLower() == "yes" || input.ToLower() == "no")
+      {
+        return true;
+      }
+      Console.WriteLine("Please enter yes or no.");
+      return false;
+    }
   }
 }

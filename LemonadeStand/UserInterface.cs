@@ -28,6 +28,19 @@ namespace LemonadeStand
       Console.WriteLine("Currently, we have 4 different items in stock, they are available in infinite quantities.");
       Console.WriteLine("These are: Ice (5 cents per cube)\nSugar (30 cents per cube)\nLemons (50 cents each)\nCups (10 cents each)");
     }
+    public static bool DoesUserWantToBuyStoreItems()
+    {
+      string userInput = ReadLineFor("Do you want to buy anything from the store?", Validation.YesNo);
+      if (userInput == "yes")
+      {
+        return true;
+      }
+      return false;
+    }
+    public static void BuyStoreItems()
+    {
+
+    }
 
     public static void DisplayTitleScreen()
     {
