@@ -22,6 +22,12 @@ namespace LemonadeStand
     {
       throw new System.NotImplementedException();
     }
+    public static void DisplayStoreInventory()
+    {
+      Console.WriteLine("Welcome to Stan's Lemonade Emporium!");
+      Console.WriteLine("Currently, we have 4 different items in stock, they are available in infinite quantities.");
+      Console.WriteLine("These are: Ice (5 cents per cube)\nSugar (30 cents per cube)\nLemons (50 cents each)\nCups (10 cents each)");
+    }
 
     public static void DisplayTitleScreen()
     {
