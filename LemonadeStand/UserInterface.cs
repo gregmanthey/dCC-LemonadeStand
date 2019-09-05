@@ -37,9 +37,9 @@ namespace LemonadeStand
       }
       return false;
     }
-    public static void BuyStoreItems()
+    public static string WhatStoreItemIsUserBuying()
     {
-
+      return ReadLineFor("What item would you like to buy? Please enter cups, sugar, lemons, or ice.", Validation.StoreItems);
     }
 
     public static void DisplayTitleScreen()

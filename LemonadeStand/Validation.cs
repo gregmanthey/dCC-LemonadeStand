@@ -38,6 +38,18 @@ namespace LemonadeStand
       Console.WriteLine("Invalid input. Please enter only a number.");
       return false;
     }
+    public static bool StoreItems(string input)
+    {
+      if (input.ToLower() == "cups"   ||
+          input.ToLower() == "lemons" ||
+          input.ToLower() == "sugar"  ||
+          input.ToLower() == "ice")
+      {
+        return true;
+      }
+      Console.WriteLine("Please enter cups, lemons, sugar, or ice.");
+      return false;
+    }
     public static bool YesNo(string input)
     {
       if (input.ToLower() == "yes" || input.ToLower() == "no")
