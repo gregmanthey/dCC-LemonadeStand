@@ -38,6 +38,16 @@ namespace LemonadeStand
       Console.WriteLine("Invalid input. Please enter only a number.");
       return false;
     }
+    public static bool NumericCharactersWithDecimal(string input)
+    {
+      Regex nonNumericOrDecimalChars = new Regex("[^0-9.]");
+      if (!nonNumericOrDecimalChars.IsMatch(input) && input.Contains("."))
+      {
+        return true;
+      }
+      Console.WriteLine("Invalid input. Please enter a number with a decimal.");
+      return false;
+    }
     public static bool StoreItems(string input)
     {
       if (input.ToLower() == "cups"   ||
@@ -48,6 +58,18 @@ namespace LemonadeStand
         return true;
       }
       Console.WriteLine("Please enter cups, lemons, sugar, or ice.");
+      return false;
+    }
+    public static bool RecipeItems(string input)
+    {
+      if (input.ToLower() == "price" ||
+          input.ToLower() == "lemons" ||
+          input.ToLower() == "sugar" ||
+          input.ToLower() == "ice")
+      {
+        return true;
+      }
+      Console.WriteLine("Please enter price, lemons, sugar, or ice.");
       return false;
     }
     public static bool YesNo(string input)

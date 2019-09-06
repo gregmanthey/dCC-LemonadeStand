@@ -28,9 +28,9 @@ namespace LemonadeStand
       Console.WriteLine("Currently, we have 4 different items in stock, they are available in infinite quantities.");
       Console.WriteLine("These are: Ice (5 cents per cube)\nSugar (30 cents per cube)\nLemons (50 cents each)\nCups (10 cents each)");
     }
-    public static bool DoesUserWantToBuyStoreItems()
+    public static bool DoesUserWantTo(string context)
     {
-      string userInput = ReadLineFor("Do you want to buy anything from the store?", Validation.YesNo);
+      string userInput = ReadLineFor($"Do you want to {context}?", Validation.YesNo);
       if (userInput == "yes")
       {
         return true;
@@ -41,12 +41,18 @@ namespace LemonadeStand
     {
       return ReadLineFor("What item would you like to buy? Please enter cups, sugar, lemons, or ice.", Validation.StoreItems);
     }
-
-    public static ushort HowManyStoreItemsIsUserBuying()
+    public static ushort HowManyItems(string context)
     {
-      return ushort.Parse((ReadLineFor("How many would you like to buy?", Validation.NumericCharacters)));
+      return ushort.Parse((ReadLineFor($"How many would you like to {context}?", Validation.NumericCharacters)));
     }
-
+    public static string WhatRecipeItemIsUserChanging()
+    {
+      return ReadLineFor("What recipe item would you like to change? Please enter price, sugar, lemons, or ice.", Validation.RecipeItems);
+    }
+    public static double WhatPriceDoYouWantToCharge()
+    {
+      return double.Parse(ReadLineFor($"What would you like to charge?", Validation.NumericCharactersWithDecimal));
+    }
     public static void DisplayTitleScreen()
     {
       Console.WriteLine("Welcome to Lemonade Stand Simulator 2020!");

@@ -5,18 +5,18 @@ using System.Text;
 
 namespace LemonadeStand
 {
-  public class Store
+  public static class Store
   {
-    private double priceOfCups = .1;
-    private double priceOfLemons = .5;
-    private double priceOfSugar = .3;
-    private double priceOfIce = .05;
+    private static double priceOfCups = .1;
+    private static double priceOfLemons = .5;
+    private static double priceOfSugar = .3;
+    private static double priceOfIce = .05;
 
-    public void DisplayStoreItems()
+    public static void DisplayStoreItems()
     {
       UI.DisplayStoreInventory();
     }
-    public void SellItems(string item, ushort amount, Player player)
+    public static void SellItems(string item, ushort amount, Player player)
     {
       switch (item)
       {
