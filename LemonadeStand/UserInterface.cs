@@ -42,6 +42,11 @@ namespace LemonadeStand
       return ReadLineFor("What item would you like to buy? Please enter cups, sugar, lemons, or ice.", Validation.StoreItems);
     }
 
+    public static ushort HowManyStoreItemsIsUserBuying()
+    {
+      return ushort.Parse((ReadLineFor("How many would you like to buy?", Validation.NumericCharacters)));
+    }
+
     public static void DisplayTitleScreen()
     {
       Console.WriteLine("Welcome to Lemonade Stand Simulator 2020!");

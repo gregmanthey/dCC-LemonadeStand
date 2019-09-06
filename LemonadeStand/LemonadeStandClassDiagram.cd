@@ -3,12 +3,11 @@
   <Class Name="LemonadeStand.Game">
     <Position X="5" Y="0.5" Width="3.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAAABAAQEAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAAABAAQAAEAAAAA=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="player" />
-      <Field Name="currentDay" />
       <Field Name="lemonadeEmporium" />
     </ShowAsAssociation>
   </Class>
@@ -70,7 +69,7 @@
   <Class Name="LemonadeStand.Store">
     <Position X="5.75" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAgACAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAgA=</HashCode>
+      <HashCode>AAAAAAAiAAAQAAAgAAAAgAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Store.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -109,7 +108,7 @@
   <Class Name="LemonadeStand.UI">
     <Position X="12" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AIAAAAAAAAAEAIAAAAAAAgAAAACAAAAgAQAAQAAAAAA=</HashCode>
+      <HashCode>AIAAAAIAAAAEAIAAAAAAAgAAAACAAAAggQAAQAgAAAA=</HashCode>
       <FileName>UserInterface.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -123,7 +122,7 @@
   <Class Name="LemonadeStand.Validation">
     <Position X="10" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAgAAAAAAACAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAgAAAAAAACAAAAAAAIAAAAAAAAACAAAAQAAAAA=</HashCode>
       <FileName>Validation.cs</FileName>
     </TypeIdentifier>
   </Class>

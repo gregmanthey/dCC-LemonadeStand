@@ -8,7 +8,7 @@ namespace LemonadeStand
   public class Game
   {
     public Player player;
-    public Day currentDay;
+    public List<Day> days = new List<Day>();
     public Store lemonadeEmporium;
 
     public void RunGame()
@@ -20,18 +20,20 @@ namespace LemonadeStand
       byte numberOfDays = UI.SetGameLengthInDays();
       for (byte i = 0; i < numberOfDays; i++)
       {
-        bool keepBuyingStuff = true;
-        while (keepBuyingStuff)
+        while (UI.DoesUserWantToBuyStoreItems())
         {
           UI.DisplayInventory();
-          //TODO: UI.DisplayStoreItems();
-          //TODO: UI.AskPlayerToBuyItems();
+          UI.DisplayStoreInventory();
+          string item = UI.WhatStoreItemIsUserBuying();
+          ushort amount = UI.HowManyStoreItemsIsUserBuying();
+          lemonadeEmporium.SellItems(item, amount, player);
           //TODO: Player buys from store lemonadeEmporium.
           //TODO: keepBuyingStuff = Ask if player would like to buy more
         }
         //TODO: List current recipe
         //TODO: Player sets recipe
-        currentDay.RunDay(player, i);
+        days.Add(new Day());
+        days[i].RunDay(player, i);
         //TODO: Display day results and cumulative results
       }
     }
