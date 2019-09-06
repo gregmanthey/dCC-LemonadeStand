@@ -9,7 +9,55 @@ namespace LemonadeStand
   {
     public override void ChangeRecipe()
     {
-      throw new NotImplementedException();
+      do
+      {
+        int amount = 0;
+        string toChange = UI.WhatRecipeItemIsUserChanging();
+        if (toChange == "price")
+        {
+          recipe.pricePerCup = UI.WhatPriceDoYouWantToCharge();
+        }
+        else
+        {
+          amount = UI.HowManyItems("change the recipe to");
+        }
+
+        switch (toChange)
+        {
+          case "ice":
+            if (amount < inventory.ice)
+            {
+              recipe.icePerCup = amount;
+            }
+            else
+            {
+              UI.DisplayErrorNotEnoughInInventory();
+            }
+            break;
+          case "lemons":
+            if (amount < inventory.lemons)
+            {
+              recipe.lemonsPerPitcher = amount;
+            }
+            else
+            {
+              UI.DisplayErrorNotEnoughInInventory();
+            }
+            break;
+          case "sugar":
+            if (amount < inventory.sugar)
+            {
+              recipe.sugarsPerPitcher = amount;
+            }
+            else
+            {
+              UI.DisplayErrorNotEnoughInInventory();
+            }
+            break;
+          default:
+            break;
+        }
+      } while (UI.DoesUserWantTo("keep changing the recipe"));
     }
 
     public override void SetName()

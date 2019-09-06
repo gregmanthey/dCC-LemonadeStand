@@ -16,7 +16,7 @@ namespace LemonadeStand
     {
       UI.DisplayStoreInventory();
     }
-    public static void SellItems(string item, ushort amount, Player player)
+    public static void SellItems(string item, int amount, Player player)
     {
       switch (item)
       {

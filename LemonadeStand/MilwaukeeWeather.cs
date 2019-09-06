@@ -7,6 +7,6 @@ namespace LemonadeStand
 {
   public class MilwaukeeWeather : Weather
   {
-    private const string ZIP = 53203;
+    private const string ZIP = "53203";
   }
 }

@@ -53,23 +53,25 @@ namespace LemonadeStand
       if (input.ToLower() == "cups"   ||
           input.ToLower() == "lemons" ||
           input.ToLower() == "sugar"  ||
-          input.ToLower() == "ice")
+          input.ToLower() == "ice"    ||
+          input.ToLower() == "cancel")
       {
         return true;
       }
-      Console.WriteLine("Please enter cups, lemons, sugar, or ice.");
+      Console.WriteLine("Please enter cups, lemons, sugar, ice, or cancel.");
       return false;
     }
     public static bool RecipeItems(string input)
     {
-      if (input.ToLower() == "price" ||
+      if (input.ToLower() == "price"  ||
           input.ToLower() == "lemons" ||
-          input.ToLower() == "sugar" ||
-          input.ToLower() == "ice")
+          input.ToLower() == "sugar"  ||
+          input.ToLower() == "ice"    ||
+          input.ToLower() == "cancel")
       {
         return true;
       }
-      Console.WriteLine("Please enter price, lemons, sugar, or ice.");
+      Console.WriteLine("Please enter price, lemons, sugar, ice, or cancel.");
       return false;
     }
     public static bool YesNo(string input)

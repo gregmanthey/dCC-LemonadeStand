@@ -8,10 +8,10 @@ namespace LemonadeStand
   public class Inventory
   {
     public double money;
-    public ushort cups;
-    public ushort lemons;
-    public ushort sugar;
-    public ushort ice;
+    public int cups;
+    public int lemons;
+    public int sugar;
+    public int ice;
 
     public Inventory()
     {

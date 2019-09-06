@@ -8,9 +8,9 @@ namespace LemonadeStand
   public class Recipe
   {
     public double pricePerCup;
-    private ushort icePerCup;
-    private ushort lemonsPerPitcher;
-    private ushort sugarsPerPitcher;
+    public int icePerCup;
+    public int lemonsPerPitcher;
+    public int sugarsPerPitcher;
 
     public Recipe()
     {
@@ -22,34 +22,7 @@ namespace LemonadeStand
 
     public void ChangeRecipe()
     {
-      do
-      {
-        ushort amount = 0;
-        string toChange = UI.WhatRecipeItemIsUserChanging();
-        if (toChange == "price")
-        {
-          pricePerCup = UI.WhatPriceDoYouWantToCharge();
-        }
-        else
-        {
-          amount = UI.HowManyItems("change the recipe to");
-        }
-
-        switch (toChange)
-        {
-          case "ice":
-            icePerCup = amount;
-            break;
-          case "lemons":
-            lemonsPerPitcher = amount;
-            break;
-          case "sugar":
-            sugarsPerPitcher = amount;
-            break;
-          default:
-            break;
-        }
-      } while (UI.DoesUserWantTo("keep changing the recipe"));
+    
     }
     public void DisplayRecipe()
     {

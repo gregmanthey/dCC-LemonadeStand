@@ -9,6 +9,7 @@ namespace LemonadeStand
   {
     public Player player;
     public List<Day> days = new List<Day>();
+    public List<Inventory> inventories = new List<Inventory>();
 
     public void RunGame()
     {
@@ -19,20 +20,39 @@ namespace LemonadeStand
       byte numberOfDays = UI.SetGameLengthInDays();
       for (byte i = 0; i < numberOfDays; i++)
       {
+        //TODO: display weather for today and tomorrow (if applicable)
+        UI.DisplayPlayerInventory(player);
+
         while (UI.DoesUserWantTo("buy anything from the store"))
         {
-          UI.DisplayInventory();
           UI.DisplayStoreInventory();
           string item = UI.WhatStoreItemIsUserBuying();
-          ushort amount = UI.HowManyItems("buy");
+          int amount = UI.HowManyItems("buy");
           Store.SellItems(item, amount, player);
+          UI.DisplayPlayerInventory(player);
         }
-        //TODO: List current recipe
-        //TODO: Player sets recipe
+
+        player.recipe.DisplayRecipe();
+        player.ChangeRecipe();
+
+        inventories.Add(player.inventory);
+
         days.Add(new Day());
         days[i].RunDay(player, i);
-        //TODO: Display day results and cumulative results
+
+        UI.DisplayResults(inventories[i], player.inventory, inventoryDifference(inventories[i], player.inventory));
       }
+      //TODO: Display final results
+      //Ask if user wants to play again
+    }
+    public Inventory inventoryDifference(Inventory startingInventory, Inventory endingInventory)
+    {
+      Inventory difference = new Inventory();
+      difference.money = startingInventory.money - endingInventory.money;
+      difference.cups = startingInventory.cups - endingInventory.cups;
+      difference.lemons = startingInventory.lemons - endingInventory.lemons;
+      difference.sugar = startingInventory.sugar - endingInventory.sugar;
+      return difference;
     }
   }
 }

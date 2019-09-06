@@ -10,17 +10,50 @@ namespace LemonadeStand
 
     public static void DisplayLore()
     {
-      throw new System.NotImplementedException();
+      //throw new System.NotImplementedException();
     }
 
     public static void DisplayRules()
     {
-      throw new System.NotImplementedException();
+      //throw new System.NotImplementedException();
     }
 
-    public static void DisplayStatus()
+    public static void DisplayResults(Inventory startingInventory, Inventory endingInventory, Inventory difference)
     {
-      throw new System.NotImplementedException();
+      Console.WriteLine("        Results");
+      Console.WriteLine("--------------------------");
+      Console.WriteLine(" Starting money: $" + startingInventory.money);
+      Console.WriteLine("   Ending money: $" + endingInventory.money);
+      Console.WriteLine("       You made: $" + difference.money);
+      Console.WriteLine("--------------------------");
+      Console.WriteLine("  Starting cups: " + startingInventory.cups);
+      Console.WriteLine("    Ending cups: " + endingInventory.cups);
+      Console.WriteLine("       You used: " + difference.cups);
+      Console.WriteLine("--------------------------");
+      Console.WriteLine("Starting lemons: " + startingInventory.lemons);
+      Console.WriteLine("  Ending lemons: " + endingInventory.lemons);
+      Console.WriteLine("       You used: " + difference.lemons);
+      Console.WriteLine("--------------------------");
+      Console.WriteLine(" Starting sugar: " + startingInventory.sugar);
+      Console.WriteLine("   Ending sugar: " + endingInventory.sugar);
+      Console.WriteLine("       You used: " + difference.sugar);
+      Console.WriteLine("--------------------------");
+      Console.WriteLine("Press Enter to continue");
+      Console.ReadLine();
+    }
+    public static void DisplayErrorNotEnoughInInventory()
+    {
+      Console.WriteLine("There is not enough in your inventory.");
+    }
+    public static void DisplayPlayerInventory(Player player)
+    {
+      Console.WriteLine($"   {player.name}'s Inventory");
+      Console.WriteLine("------------------------------------");
+      Console.WriteLine(" Starting money: $" + player.inventory.money);
+      Console.WriteLine("  Starting cups: " + player.inventory.cups);
+      Console.WriteLine("Starting lemons: " + player.inventory.lemons);
+      Console.WriteLine(" Starting sugar: " + player.inventory.sugar);
+      Console.WriteLine("------------------------------------");
     }
     public static void DisplayStoreInventory()
     {
@@ -41,9 +74,9 @@ namespace LemonadeStand
     {
       return ReadLineFor("What item would you like to buy? Please enter cups, sugar, lemons, or ice.", Validation.StoreItems);
     }
-    public static ushort HowManyItems(string context)
+    public static int HowManyItems(string context)
     {
-      return ushort.Parse((ReadLineFor($"How many would you like to {context}?", Validation.NumericCharacters)));
+      return int.Parse((ReadLineFor($"How many would you like to {context}?", Validation.NumericCharacters)));
     }
     public static string WhatRecipeItemIsUserChanging()
     {
@@ -71,10 +104,7 @@ namespace LemonadeStand
       return userInput;
     }
 
-    public static void DisplayInventory()
-    {
-      throw new System.NotImplementedException();
-    }
+
     public static string SetName(string context)
     {
       return ReadLineFor($"Please enter a name for {context}:", Validation.AlphabetCharacters);
