@@ -26,13 +26,7 @@ namespace LemonadeStand
     }
     public void DisplayRecipe()
     {
-      Console.WriteLine("         Current Recipe");
-      Console.WriteLine("------------------------------------");
-      Console.WriteLine("     Price per cup: " + pricePerCup);
-      Console.WriteLine(" Ice cubes per cup: " + icePerCup);
-      Console.WriteLine("Lemons per pitcher: " + lemonsPerPitcher);
-      Console.WriteLine("Sugars per pitcher: " + sugarsPerPitcher);
-      Console.WriteLine("------------------------------------");
+      UI.DisplayCurrentRecipe(this);
     }
   }
 }

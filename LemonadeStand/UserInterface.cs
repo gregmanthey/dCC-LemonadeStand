@@ -49,17 +49,34 @@ namespace LemonadeStand
     {
       Console.WriteLine($"   {player.name}'s Inventory");
       Console.WriteLine("------------------------------------");
-      Console.WriteLine(" Starting money: $" + player.inventory.money);
-      Console.WriteLine("  Starting cups: " + player.inventory.cups);
-      Console.WriteLine("Starting lemons: " + player.inventory.lemons);
-      Console.WriteLine(" Starting sugar: " + player.inventory.sugar);
+      Console.WriteLine("       Money: $" + player.inventory.money);
+      Console.WriteLine("        Cups: " + player.inventory.cups);
+      Console.WriteLine("      Lemons: " + player.inventory.lemons);
+      Console.WriteLine("       Sugar: " + player.inventory.sugar);
       Console.WriteLine("------------------------------------");
+    }
+
+    public static void DisplayCurrentRecipe(Recipe recipe)
+    {
+      Console.WriteLine("            Current Recipe");
+      Console.WriteLine("-----------------------------------------");
+      Console.WriteLine("        Price per cup: " + recipe.pricePerCup);
+      Console.WriteLine("    Ice cubes per cup: " + recipe.icePerCup);
+      Console.WriteLine("   Lemons per pitcher: " + recipe.lemonsPerPitcher);
+      Console.WriteLine("   Sugars per pitcher: " + recipe.sugarsPerPitcher);
+      Console.WriteLine("-----------------------------------------");
     }
     public static void DisplayStoreInventory()
     {
-      Console.WriteLine("Welcome to Stan's Lemonade Emporium!");
+      Console.WriteLine("     Welcome to Stan's Lemonade Emporium!");
+      Console.WriteLine("----------------------------------------------");
       Console.WriteLine("Currently, we have 4 different items in stock, they are available in infinite quantities.");
-      Console.WriteLine("These are: Ice (5 cents per cube)\nSugar (30 cents per cube)\nLemons (50 cents each)\nCups (10 cents each)");
+      Console.WriteLine("       Ice:  5 cents per cube");
+      Console.WriteLine("     Sugar: 30 cents per cube");
+      Console.WriteLine("    Lemons: 50 cents each");
+      Console.WriteLine("      Cups: 10 cents each");
+      Console.WriteLine("----------------------------------------------");
+
     }
     public static bool DoesUserWantTo(string context)
     {

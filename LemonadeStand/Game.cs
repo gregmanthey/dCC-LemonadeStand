@@ -16,30 +16,15 @@ namespace LemonadeStand
       UI.DisplayTitleScreen();
       UI.DisplayLore();
       UI.DisplayRules();
+      player = new Human();
       //TODO: UI.SetStandName(), UI.GetNumberofPlayers(), UI.SetGameMode() 
       byte numberOfDays = UI.SetGameLengthInDays();
       for (byte i = 0; i < numberOfDays; i++)
       {
         //TODO: display weather for today and tomorrow (if applicable)
-        UI.DisplayPlayerInventory(player);
-
-        while (UI.DoesUserWantTo("buy anything from the store"))
-        {
-          UI.DisplayStoreInventory();
-          string item = UI.WhatStoreItemIsUserBuying();
-          int amount = UI.HowManyItems("buy");
-          Store.SellItems(item, amount, player);
-          UI.DisplayPlayerInventory(player);
-        }
-
-        player.recipe.DisplayRecipe();
-        player.ChangeRecipe();
-
         inventories.Add(player.inventory);
-
         days.Add(new Day());
         days[i].RunDay(player, i);
-
         UI.DisplayResults(inventories[i], player.inventory, inventoryDifference(inventories[i], player.inventory));
       }
       //TODO: Display final results
