@@ -12,9 +12,15 @@ namespace LemonadeStand
     private static double priceOfSugar = .3;
     private static double priceOfIce = .05;
 
-    public static void DisplayStoreItems()
+    public static void DisplayItemsForSale()
     {
       UI.DisplayStoreInventory();
+    }
+    public static void ProcessOrder(Player player)
+    {
+      string item = UI.WhatStoreItemIsUserBuying();
+      int amount = UI.HowManyItems("buy");
+      Store.SellItems(item, amount, player);
     }
     public static void SellItems(string item, int amount, Player player)
     {

@@ -8,20 +8,22 @@ namespace LemonadeStand
   public class Day
   {
 
-    public Weather Weather;
+    public Weather weather;
 
-    public Customer Customer;
+    public List<Customer> customers = new List<Customer>();
     private DateTime date = new DateTime();
 
+    public Day()
+    {
+
+    }
     public void RunDay(Player player, byte day)
     {
       UI.DisplayPlayerInventory(player);
       while (UI.DoesUserWantTo("buy anything from the store"))
       {
-        UI.DisplayStoreInventory();
-        string item = UI.WhatStoreItemIsUserBuying();
-        int amount = UI.HowManyItems("buy");
-        Store.SellItems(item, amount, player);
+        Store.DisplayItemsForSale();
+        Store.ProcessOrder(player);
         UI.DisplayPlayerInventory(player);
       }
       player.recipe.DisplayRecipe();
