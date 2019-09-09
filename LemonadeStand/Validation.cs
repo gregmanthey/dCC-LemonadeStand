@@ -76,11 +76,14 @@ namespace LemonadeStand
     }
     public static bool YesNo(string input)
     {
-      if (input.ToLower() == "yes" || input.ToLower() == "no")
+      if (input.ToLower() == "yes" ||
+          input.ToLower() == "y"   ||
+          input.ToLower() == "no"  ||
+          input.ToLower() == "n")
       {
         return true;
       }
-      Console.WriteLine("Please enter yes or no.");
+      Console.WriteLine("Please enter yes (y) or no (n).");
       return false;
     }
   }

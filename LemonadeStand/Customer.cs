@@ -18,18 +18,20 @@ namespace LemonadeStand
     {
       int baseBuyingTemperature = 65;
       int successModifier = 25;
-      int failureModifier = -25;
-      int purchaseLevel = 60;
+      int failureModifier = -5;
+      int purchaseLevel = 50;
 
       if(weather.actualTemperature > baseBuyingTemperature)
       {
         thirstLevel += successModifier + weather.actualTemperature - baseBuyingTemperature;
       }
 
-      if(weather.actualCondition == "sunny")
+      int conditionIndex = weather.conditions.IndexOf(weather.actualCondition);
+      if (conditionIndex < 2)
       {
         thirstLevel += successModifier;
       }
+      thirstLevel -= failureModifier * conditionIndex;
 
       if(thirstLevel > purchaseLevel)
       {

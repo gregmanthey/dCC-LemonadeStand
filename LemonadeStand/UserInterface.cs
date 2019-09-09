@@ -117,7 +117,7 @@ namespace LemonadeStand
     public static bool DoesUserWantTo(string context)
     {
       string userInput = ReadLineFor($"Do you want to {context}?", Validation.YesNo);
-      if (userInput == "yes")
+      if (userInput.StartsWith("y"))
       {
         return true;
       }
@@ -149,9 +149,9 @@ namespace LemonadeStand
     public static byte SetGameLengthInDays()
     {
       byte userInput = byte.Parse(ReadLineFor("How many days do you want to simulate (up to 10)?", Validation.NumericCharacters));
-      while (userInput < 1 || userInput > 10)
+      while (userInput < 1 || userInput > 30)
       {
-        Console.WriteLine("Please enter a valid input from 1 to 10.");
+        Console.WriteLine("Please enter a valid input from 1 to 30.");
         return SetGameLengthInDays();
       }
       return userInput;

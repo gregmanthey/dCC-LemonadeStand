@@ -13,11 +13,12 @@ namespace LemonadeStand
       {
         int amount = 0;
         string toChange = UI.WhatRecipeItemIsUserChanging();
+        
         if (toChange == "price")
         {
           recipe.pricePerCup = UI.WhatPriceDoYouWantToCharge();
         }
-        else
+        else if (toChange != "cancel")
         {
           amount = UI.HowManyItems("change the recipe to");
         }

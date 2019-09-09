@@ -19,8 +19,11 @@ namespace LemonadeStand
     public static void ProcessOrder(Player player)
     {
       string item = UI.WhatStoreItemIsUserBuying();
-      int amount = UI.HowManyItems("buy");
-      Store.SellItems(item, amount, player);
+      if (item != "cancel")
+      {
+        int amount = UI.HowManyItems("buy");
+        Store.SellItems(item, amount, player);
+      }
     }
     public static void SellItems(string item, int amount, Player player)
     {
