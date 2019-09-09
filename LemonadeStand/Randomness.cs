@@ -22,7 +22,6 @@ namespace LemonadeStand
         lowNumber = highNumber;
         highNumber = actualHighNumber;
       }
-      //System.Threading.Thread.Sleep(50);
       return randomNumber.Next(lowNumber, highNumber + 1);
     }
     
@@ -38,8 +37,19 @@ namespace LemonadeStand
         lowNumber = highNumber;
         highNumber = actualHighNumber;
       }
-      //System.Threading.Thread.Sleep(50);
       return Math.Round(randomNumber.NextDouble() * (highNumber - lowNumber) + lowNumber, 2);
+    }
+    public static int RandomTemperature()
+    {
+      int minimumTemperature = 50;
+      int maximumTemperature = 100;
+      return RandomInt(minimumTemperature, maximumTemperature);
+    }
+    public static double RandomCustomerMaximumPayThreshold()
+    {
+      double maximumPriceMinimum = .15;
+      double maximumPriceMaximum = .50;
+      return RandomDouble(maximumPriceMinimum, maximumPriceMaximum);
     }
   }
 }
