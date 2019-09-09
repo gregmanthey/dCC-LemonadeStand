@@ -5,7 +5,7 @@ using System.Text;
 
 namespace LemonadeStand
 {
-  public abstract class Weather
+  public class Weather
   {
     public int forecastTemperature;
     public string forecastCondition;

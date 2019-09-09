@@ -20,12 +20,12 @@ namespace LemonadeStand
       int successModifier = 25;
       int purchaseLevel = 60;
 
-      if(weather.temperature > baseBuyingTemperature)
+      if(weather.actualTemperature > baseBuyingTemperature)
       {
         thirstLevel += successModifier + weather.temperature - baseBuyingTemperature;
       }
 
-      if(weather.condition == "sunny")
+      if(weather.actualCondition == "sunny")
       {
         thirstLevel += successModifier;
       }

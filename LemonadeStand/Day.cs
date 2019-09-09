@@ -7,17 +7,13 @@ namespace LemonadeStand
 {
   public class Day
   {
-
     public Weather weather;
-
-    public List<Customer> customers = new List<Customer>();
-    private DateTime date = new DateTime();
 
     public Day()
     {
-
+      weather = new Weather();
     }
-    public void RunDay(Player player, byte day)
+    public void RunDay(Player player)
     {
       UI.DisplayPlayerInventory(player);
       while (UI.DoesUserWantTo("buy anything from the store"))
@@ -31,6 +27,22 @@ namespace LemonadeStand
       {
         player.recipe.ChangeRecipe();
         player.recipe.DisplayRecipe();
+      }
+      List<Customer> customers = new List<Customer>(Randomness.RandomInt(50, 200));
+      for (int i = 0; i < customers.Count; i++)
+      {
+        customers[i] = new Customer(weather, player.recipe);
+      }
+      foreach (Customer customer in customers)
+      {
+        if(customer.isBuying == true)
+        {
+          if (player.RanOutOfInventoryItems())
+          {
+            break;
+          }
+          player.AdjustInventoryAfterSale();
+        }
       }
     }
   }
