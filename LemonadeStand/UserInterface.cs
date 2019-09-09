@@ -45,6 +45,13 @@ namespace LemonadeStand
     {
       Console.WriteLine("There is not enough in your inventory.");
     }
+    public static void NotEnoughMoneyFor(string context)
+    {
+      Console.WriteLine($"Sorry, but you don't have enough money to purchase {context}.");
+      Console.WriteLine("   If you want to take out a loan, check in with your bank.");
+      Console.WriteLine("                This is but a simple store.");
+      Console.WriteLine("----------------------------------------------------------------");
+    }
     public static void DisplayPlayerInventory(Player player)
     {
       Console.WriteLine($"   {player.name}'s Inventory");

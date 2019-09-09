@@ -29,7 +29,7 @@ namespace LemonadeStand
         case "cups":
           if (player.inventory.money < amount * priceOfCups)
           {
-            //UI.NotEnoughMoneyFor($"{amount} cups");
+            UI.NotEnoughMoneyFor($"{amount} cups");
           }
           else
           {
@@ -40,7 +40,7 @@ namespace LemonadeStand
         case "lemons":
           if (player.inventory.money < amount * priceOfLemons)
           {
-            //UI.NotEnoughMoneyFor($"{amount} lemons");
+            UI.NotEnoughMoneyFor($"{amount} lemons");
           }
           else
           {
@@ -51,7 +51,7 @@ namespace LemonadeStand
         case "sugar":
           if (player.inventory.money < amount * priceOfSugar)
           {
-            //UI.NotEnoughMoneyFor($"{amount} sugars");
+            UI.NotEnoughMoneyFor($"{amount} sugars");
           }
           else
           {
@@ -62,7 +62,7 @@ namespace LemonadeStand
         case "ice":
           if (player.inventory.money < amount * priceOfSugar)
           {
-            //UI.NotEnoughMoneyFor($"{amount} sugars");
+            UI.NotEnoughMoneyFor($"{amount} sugars");
           }
           else
           {

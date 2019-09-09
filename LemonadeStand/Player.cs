@@ -20,15 +20,23 @@ namespace LemonadeStand
       SetStandName();
     }
     public abstract void ChangeRecipe();
-    public void AdjustInventoryAfterSale()
+    public void MakePitcherOfLemonade()
     {
+      inventory.lemons -= recipe.lemonsPerPitcher;
+      inventory.sugar -= recipe.sugarsPerPitcher;
+    }
+    public void AdjustInventoryAfterSale(int cupsSold)
+    {
+      int cupsPerPitcher = 8;
       Console.WriteLine("Cup sold, money total before selling: " + inventory.money);
       inventory.money += recipe.pricePerCup;
       Console.WriteLine("Cup sold, money total after selling: " + inventory.money);
       inventory.cups--;
       inventory.ice -= recipe.icePerCup;
-      inventory.lemons -= recipe.lemonsPerPitcher;
-      inventory.sugar -= recipe.sugarsPerPitcher;
+      if (cupsSold == cupsPerPitcher && !RanOutOfInventoryItems())
+      {
+        MakePitcherOfLemonade();
+      }
     }
     public bool RanOutOfInventoryItems()
     {
@@ -45,12 +53,12 @@ namespace LemonadeStand
       }
       if (inventory.lemons - recipe.lemonsPerPitcher < 0)
       {
-        Console.WriteLine($"{standName} ran out of ice!");
+        Console.WriteLine($"{standName} ran out of lemons!");
         ranOutOfAnItem = true;
       }
       if (inventory.sugar - recipe.sugarsPerPitcher < 0)
       {
-        Console.WriteLine($"{standName} ran out of ice!");
+        Console.WriteLine($"{standName} ran out of sugar!");
         ranOutOfAnItem = true;
       }
       return ranOutOfAnItem;

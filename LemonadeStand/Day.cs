@@ -30,8 +30,14 @@ namespace LemonadeStand
         player.recipe.DisplayRecipe();
       }
 
+      
+      int cupsSold = 0;
+      if (player.RanOutOfInventoryItems())
+      {
+        return;
+      }
+      player.MakePitcherOfLemonade();
       List<Customer> buyingCustomers = GenerateCustomerList(weather, player.recipe);
-
       foreach (Customer buyingCustomer in buyingCustomers)
       {
         if (buyingCustomer.isBuying == true)
@@ -40,7 +46,8 @@ namespace LemonadeStand
           {
             break;
           }
-          player.AdjustInventoryAfterSale();
+          cupsSold++;
+          player.AdjustInventoryAfterSale(cupsSold);
         }
       }
     }
@@ -48,7 +55,7 @@ namespace LemonadeStand
     {
       List<Customer> buyingCustomers = new List<Customer>();
 
-      for (byte i = 0; i < Randomness.RandomInt(50, 200); i++)
+      for (byte i = 0; i < Randomness.RandomInt(50, 255); i++)
       {
         Customer customer = new Customer(weather, recipe);
 
