@@ -22,12 +22,16 @@ namespace LemonadeStand
       inventories = new List<Inventory>();
       numberOfDays = UI.SetGameLengthInDays();
       GenerateDaysAndWeathers();
-      //TODO: UI.DisplayCompleteWeatherForecast(weathers);
+      UI.DisplayCompleteWeatherForecast(weathers);
       for (byte i = 0; i < numberOfDays; i++)
       {
         inventories.Add(player.inventory);
         days[i].RunDay(player, weathers[i]);
         UI.DisplayResults(inventories[i], player.inventory, inventoryDifference(inventories[i], player.inventory));
+        if(i + 1 < numberOfDays)
+        {
+          UI.DisplayWeatherForTomorrow(weathers[i + 1]);
+        }
       }
       
       //TODO: Display final results

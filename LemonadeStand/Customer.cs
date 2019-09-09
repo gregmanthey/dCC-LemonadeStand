@@ -18,6 +18,7 @@ namespace LemonadeStand
     {
       int baseBuyingTemperature = 65;
       int successModifier = 25;
+      int failureModifier = -25;
       int purchaseLevel = 60;
 
       if(weather.actualTemperature > baseBuyingTemperature)

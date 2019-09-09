@@ -20,7 +20,8 @@ namespace LemonadeStand
 
     public static void DisplayResults(Inventory startingInventory, Inventory endingInventory, Inventory difference)
     {
-      Console.WriteLine("        Results");
+      Console.WriteLine("--------------------------");
+      Console.WriteLine("\n        Results\n");
       Console.WriteLine("--------------------------");
       Console.WriteLine(" Starting money: $" + startingInventory.money);
       Console.WriteLine("   Ending money: $" + endingInventory.money);
@@ -40,6 +41,34 @@ namespace LemonadeStand
       Console.WriteLine("--------------------------");
       Console.WriteLine("Press Enter to continue");
       Console.ReadLine();
+    }
+    public static void DisplayCompleteWeatherForecast(List<Weather> weathers)
+    {
+      Console.WriteLine("------------------------------");
+      Console.WriteLine("\n      Weather Forecast\n");
+      Console.WriteLine("------------------------------");
+      for (byte i = 0; i < weathers.Count; i++)
+      {
+        Console.WriteLine($"     Day {i + 1} Forecast:");
+        Console.WriteLine($"{weathers[i].forecastTemperature} degrees and {weathers[i].forecastCondition}");
+        Console.WriteLine("-----------------------------------------------------");
+      }
+    }
+    public static void DisplayActualWeatherForToday(Weather weather)
+    {
+      Console.WriteLine("------------------------------");
+      Console.WriteLine("\n      Today's weather\n");
+      Console.WriteLine("-----------------------------------------------------");
+      Console.WriteLine($" {weather.actualTemperature} and {weather.actualCondition}");
+      Console.WriteLine("-----------------------------------------------------");
+    }
+    public static void DisplayWeatherForTomorrow(Weather weather)
+    {
+      Console.WriteLine("------------------------------");
+      Console.WriteLine("\n   Forecast for Tomorrow\n");
+      Console.WriteLine("-----------------------------------------------------");
+      Console.WriteLine($" {weather.forecastTemperature} and {weather.forecastCondition}");
+      Console.WriteLine("-----------------------------------------------------");
     }
     public static void DisplayErrorNotEnoughInInventory()
     {

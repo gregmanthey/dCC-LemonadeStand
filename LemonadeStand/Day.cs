@@ -13,6 +13,7 @@ namespace LemonadeStand
     }
     public void RunDay(Player player, Weather weather)
     {
+      UI.DisplayActualWeatherForToday(weather);
       UI.DisplayPlayerInventory(player);
 
       while (UI.DoesUserWantTo("buy anything from the store"))
