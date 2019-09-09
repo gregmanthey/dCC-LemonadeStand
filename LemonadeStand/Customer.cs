@@ -22,7 +22,7 @@ namespace LemonadeStand
 
       if(weather.actualTemperature > baseBuyingTemperature)
       {
-        thirstLevel += successModifier + weather.temperature - baseBuyingTemperature;
+        thirstLevel += successModifier + weather.actualTemperature - baseBuyingTemperature;
       }
 
       if(weather.actualCondition == "sunny")

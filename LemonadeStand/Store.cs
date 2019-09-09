@@ -27,20 +27,48 @@ namespace LemonadeStand
       switch (item)
       {
         case "cups":
-          player.inventory.money -= amount * priceOfCups;
-          player.inventory.cups += amount;
+          if (player.inventory.money < amount * priceOfCups)
+          {
+            //UI.NotEnoughMoneyFor($"{amount} cups");
+          }
+          else
+          {
+            player.inventory.money -= amount * priceOfCups;
+            player.inventory.cups += amount;
+          }
           break;
         case "lemons":
-          player.inventory.money -= amount * priceOfLemons;
-          player.inventory.lemons += amount;
+          if (player.inventory.money < amount * priceOfLemons)
+          {
+            //UI.NotEnoughMoneyFor($"{amount} lemons");
+          }
+          else
+          {
+            player.inventory.money -= amount * priceOfLemons;
+            player.inventory.lemons += amount;
+          }
           break;
         case "sugar":
-          player.inventory.money -= amount * priceOfSugar;
-          player.inventory.sugar += amount;
+          if (player.inventory.money < amount * priceOfSugar)
+          {
+            //UI.NotEnoughMoneyFor($"{amount} sugars");
+          }
+          else
+          {
+            player.inventory.money -= amount * priceOfSugar;
+            player.inventory.sugar += amount;
+          }
           break;
         case "ice":
-          player.inventory.money -= amount * priceOfIce;
-          player.inventory.ice += amount;
+          if (player.inventory.money < amount * priceOfSugar)
+          {
+            //UI.NotEnoughMoneyFor($"{amount} sugars");
+          }
+          else
+          {
+            player.inventory.money -= amount * priceOfIce;
+            player.inventory.ice += amount;
+          }
           break;
         default:
           break;

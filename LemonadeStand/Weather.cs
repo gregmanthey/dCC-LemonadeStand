@@ -26,7 +26,7 @@ namespace LemonadeStand
 
     private void SetCondition()
     {
-      List<string> conditions = new List<string>() { "immaculately beautiful", "sunny", "partly sunny", "partly cloudy", "cloudy", "rainy", "thunderstormy", "nuclear winter" };
+      List<string> conditions = new List<string>() { "immaculately beautiful", "sunny", "partly sunny", "partly cloudy", "cloudy", "rainy", "thunderstormy", "nuclear wintery" };
       int randomIndex = Randomness.RandomInt(0, conditions.Count - 1);
       forecastCondition = conditions[randomIndex];
       int randomModifier = Randomness.RandomInt(-1, 1);
