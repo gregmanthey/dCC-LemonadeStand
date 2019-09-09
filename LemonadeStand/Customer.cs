@@ -9,12 +9,12 @@ namespace LemonadeStand
   {
     public int thirstLevel;
     public bool isBuying;
-    public Customer(Weather weather)
+    public Customer(Weather weather, Recipe recipe)
     {
-      IsCustomerBuying(weather);
+      IsCustomerBuying(weather, recipe);
     }
 
-    public void IsCustomerBuying(Weather weather)
+    public void IsCustomerBuying(Weather weather, Recipe recipe)
     {
       int baseBuyingTemperature = 65;
       int successModifier = 25;
