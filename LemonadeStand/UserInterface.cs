@@ -76,13 +76,13 @@ namespace LemonadeStand
     public static void DisplayStoreInventory()
     {
       Console.WriteLine("     Welcome to Stan's Lemonade Emporium!");
-      Console.WriteLine("----------------------------------------------");
+      Console.WriteLine("------------------------------------------------");
       Console.WriteLine("Currently, we have 4 different items in stock, they are available in infinite quantities.");
-      Console.WriteLine("       Ice:  5 cents per cube");
-      Console.WriteLine("     Sugar: 30 cents per cube");
-      Console.WriteLine("    Lemons: 50 cents each");
-      Console.WriteLine("      Cups: 10 cents each");
-      Console.WriteLine("----------------------------------------------");
+      Console.WriteLine($"       Ice: {Store.priceOfIce * 100} cents per cube");
+      Console.WriteLine($"     Sugar: {Store.priceOfSugar * 100} cents per cube");
+      Console.WriteLine($"    Lemons: {Store.priceOfLemons * 100} cents each");
+      Console.WriteLine($"      Cups: {Store.priceOfCups * 100} cents each");
+      Console.WriteLine("------------------------------------------------");
 
     }
     public static bool DoesUserWantTo(string context)

@@ -7,10 +7,10 @@ namespace LemonadeStand
 {
   public static class Store
   {
-    private static double priceOfCups = .1;
-    private static double priceOfLemons = .5;
-    private static double priceOfSugar = .3;
-    private static double priceOfIce = .05;
+    public static double priceOfCups = .1;
+    public static double priceOfLemons = .5;
+    public static double priceOfSugar = .3;
+    public static double priceOfIce = .05;
 
     public static void DisplayItemsForSale()
     {
