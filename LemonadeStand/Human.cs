@@ -69,8 +69,7 @@ namespace LemonadeStand
 
     public override void SetStandName()
     {
-      string context = $"{name}'s lemonade stand";
-      standName = UI.SetName(context);
+      standName = $"{name}'s Lemonade Stand";
     }
   }
 }

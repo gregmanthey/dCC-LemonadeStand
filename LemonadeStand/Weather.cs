@@ -30,7 +30,7 @@ namespace LemonadeStand
       int randomIndex = Randomness.RandomInt(0, conditions.Count - 1);
       forecastCondition = conditions[randomIndex];
       int randomModifier = Randomness.RandomInt(-1, 1);
-      if(randomIndex + randomModifier < 0 || randomIndex + randomModifier > conditions.Count)
+      if(randomIndex + randomModifier < 0 || randomIndex + randomModifier >= conditions.Count)
       {
         actualCondition = conditions[randomIndex];
       }

@@ -59,7 +59,7 @@ namespace LemonadeStand
       for (byte i = 0; i < Randomness.RandomInt(50, 255); i++)
       {
         Customer customer = new Customer(weather, recipe);
-
+        Console.WriteLine($"Customer stats: Thirst level: {customer.thirstLevel}, IsBuying: {customer.isBuying}");
         if (customer.isBuying)
         {
           buyingCustomers.Add(customer);

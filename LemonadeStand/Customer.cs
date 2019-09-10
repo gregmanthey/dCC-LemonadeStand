@@ -11,6 +11,7 @@ namespace LemonadeStand
     public bool isBuying;
     public Customer(Weather weather, Recipe recipe)
     {
+      thirstLevel = Randomness.RandomInt(0, 30);
       IsCustomerBuying(weather, recipe);
     }
 
@@ -32,6 +33,16 @@ namespace LemonadeStand
         thirstLevel += successModifier;
       }
       thirstLevel -= failureModifier * conditionIndex;
+
+      if (recipe.lemonsPerPitcher > 5 && recipe.sugarsPerPitcher > 5)
+      {
+        thirstLevel += successModifier;
+      }
+      
+      if (recipe.icePerCup > 10 && weather.actualTemperature > 88)
+      {
+        thirstLevel += successModifier;
+      }
 
       if(thirstLevel > purchaseLevel)
       {

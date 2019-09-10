@@ -63,9 +63,9 @@ namespace LemonadeStand
           }
           break;
         case "ice":
-          if (player.inventory.money < amount * priceOfSugar)
+          if (player.inventory.money < amount * priceOfIce)
           {
-            UI.NotEnoughMoneyFor($"{amount} sugars");
+            UI.NotEnoughMoneyFor($"{amount} ice");
           }
           else
           {

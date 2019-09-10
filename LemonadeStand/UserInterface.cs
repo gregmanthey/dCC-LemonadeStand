@@ -39,6 +39,10 @@ namespace LemonadeStand
       Console.WriteLine("   Ending sugar: " + endingInventory.sugar);
       Console.WriteLine("       You used: " + difference.sugar);
       Console.WriteLine("--------------------------");
+      Console.WriteLine("   Starting ice: " + startingInventory.ice);
+      Console.WriteLine("     Ending ice: " + endingInventory.ice);
+      Console.WriteLine("       You used: " + difference.ice);
+      Console.WriteLine("--------------------------");
       Console.WriteLine("Press Enter to continue");
       Console.ReadLine();
     }
@@ -89,6 +93,7 @@ namespace LemonadeStand
       Console.WriteLine("        Cups: " + player.inventory.cups);
       Console.WriteLine("      Lemons: " + player.inventory.lemons);
       Console.WriteLine("       Sugar: " + player.inventory.sugar);
+      Console.WriteLine("         Ice: " + player.inventory.ice);
       Console.WriteLine("------------------------------------");
     }
 
