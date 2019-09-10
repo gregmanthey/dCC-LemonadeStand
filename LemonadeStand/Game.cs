@@ -16,8 +16,6 @@ namespace LemonadeStand
     public bool RunGame()
     {
       UI.DisplayTitleScreen();
-      UI.DisplayLore();
-      UI.DisplayRules();
       player = new Human();
       inventories = new List<Inventory>();
       numberOfDays = UI.SetGameLengthInDays();

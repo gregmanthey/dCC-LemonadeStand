@@ -7,17 +7,6 @@ namespace LemonadeStand
 {
   public static class UI
   {
-
-    public static void DisplayLore()
-    {
-      //throw new System.NotImplementedException();
-    }
-
-    public static void DisplayRules()
-    {
-      //throw new System.NotImplementedException();
-    }
-
     public static void DisplayResults(Inventory startingInventory, Inventory endingInventory, Inventory difference)
     {
       Console.WriteLine("--------------------------");
@@ -153,10 +142,10 @@ namespace LemonadeStand
 
     public static byte SetGameLengthInDays()
     {
-      byte userInput = byte.Parse(ReadLineFor("How many days do you want to simulate (up to 10)?", Validation.NumericCharacters));
-      while (userInput < 1 || userInput > 30)
+      byte userInput = byte.Parse(ReadLineFor("How many days do you want to simulate (up to 14)?", Validation.NumericCharacters));
+      while (userInput < 1 || userInput > 14)
       {
-        Console.WriteLine("Please enter a valid input from 1 to 30.");
+        Console.WriteLine("Please enter a valid input from 1 to 14.");
         return SetGameLengthInDays();
       }
       return userInput;
