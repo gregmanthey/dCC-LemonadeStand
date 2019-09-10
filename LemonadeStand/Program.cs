@@ -10,8 +10,13 @@ namespace LemonadeStand
   {
     static void Main(string[] args)
     {
-      Game lemonadeStand = new Game();
-      lemonadeStand.RunGame();
+      bool keepPlaying = false;
+      do
+      {
+        Game lemonadeStand = new Game();
+        keepPlaying = lemonadeStand.RunGame();
+      } while (keepPlaying);
+      System.Environment.Exit(0);
     }
   }
 }

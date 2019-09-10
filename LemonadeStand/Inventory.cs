@@ -21,5 +21,13 @@ namespace LemonadeStand
       sugar = 0;
       ice = 0;
     }
+    public Inventory(Inventory inventory)
+    {
+      money = inventory.money;
+      cups = inventory.cups;
+      lemons = inventory.lemons;
+      sugar = inventory.sugar;
+      ice = inventory.ice;
+    }
   }
 }

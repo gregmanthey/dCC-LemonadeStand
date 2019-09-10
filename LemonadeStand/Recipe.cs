@@ -20,10 +20,6 @@ namespace LemonadeStand
       sugarsPerPitcher = 5;
     }
 
-    public void ChangeRecipe()
-    {
-    
-    }
     public void DisplayRecipe()
     {
       UI.DisplayCurrentRecipe(this);

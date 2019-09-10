@@ -23,9 +23,9 @@ namespace LemonadeStand
       Console.WriteLine("--------------------------");
       Console.WriteLine("\n        Results\n");
       Console.WriteLine("--------------------------");
-      Console.WriteLine(" Starting money: $" + startingInventory.money);
-      Console.WriteLine("   Ending money: $" + endingInventory.money);
-      Console.WriteLine("       You made: $" + difference.money);
+      Console.WriteLine(" Starting money: $" + Math.Round(startingInventory.money, 2));
+      Console.WriteLine("   Ending money: $" + Math.Round(endingInventory.money, 2));
+      Console.WriteLine("       You made: $" + Math.Round(difference.money, 2));
       Console.WriteLine("--------------------------");
       Console.WriteLine("  Starting cups: " + startingInventory.cups);
       Console.WriteLine("    Ending cups: " + endingInventory.cups);
@@ -89,7 +89,7 @@ namespace LemonadeStand
     {
       Console.WriteLine($"   {player.name}'s Inventory");
       Console.WriteLine("------------------------------------");
-      Console.WriteLine("       Money: $" + player.inventory.money);
+      Console.WriteLine("       Money: $" + Math.Round(player.inventory.money, 2));
       Console.WriteLine("        Cups: " + player.inventory.cups);
       Console.WriteLine("      Lemons: " + player.inventory.lemons);
       Console.WriteLine("       Sugar: " + player.inventory.sugar);

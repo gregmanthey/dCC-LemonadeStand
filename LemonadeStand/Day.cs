@@ -27,11 +27,10 @@ namespace LemonadeStand
 
       while (UI.DoesUserWantTo("change the recipe"))
       {
-        player.recipe.ChangeRecipe();
+        player.ChangeRecipe();
         player.recipe.DisplayRecipe();
       }
 
-      
       int cupsSold = 0;
       if (player.RanOutOfInventoryItems())
       {
@@ -55,11 +54,10 @@ namespace LemonadeStand
     private List<Customer> GenerateCustomerList(Weather weather, Recipe recipe)
     {
       List<Customer> buyingCustomers = new List<Customer>();
-
-      for (byte i = 0; i < Randomness.RandomInt(50, 255); i++)
+      int numberOfCustomers = Randomness.RandomInt(100, 200);
+      for (int i = 0; i < numberOfCustomers; i++)
       {
         Customer customer = new Customer(weather, recipe);
-        Console.WriteLine($"Customer stats: Thirst level: {customer.thirstLevel}, IsBuying: {customer.isBuying}");
         if (customer.isBuying)
         {
           buyingCustomers.Add(customer);

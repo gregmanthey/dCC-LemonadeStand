@@ -8,10 +8,12 @@ namespace LemonadeStand
   public class Customer
   {
     public int thirstLevel;
+    public double priceLimit;
     public bool isBuying;
     public Customer(Weather weather, Recipe recipe)
     {
       thirstLevel = Randomness.RandomInt(0, 30);
+      priceLimit = Randomness.RandomCustomerMaximumPayThreshold();
       IsCustomerBuying(weather, recipe);
     }
 
@@ -38,13 +40,17 @@ namespace LemonadeStand
       {
         thirstLevel += successModifier;
       }
+      if (recipe.lemonsPerPitcher < 4 || recipe.sugarsPerPitcher < 4)
+      {
+        thirstLevel -= failureModifier * 10;
+      }
       
       if (recipe.icePerCup > 10 && weather.actualTemperature > 88)
       {
         thirstLevel += successModifier;
       }
 
-      if(thirstLevel > purchaseLevel)
+      if(thirstLevel > purchaseLevel && recipe.pricePerCup <= priceLimit)
       {
         isBuying = true;
       }

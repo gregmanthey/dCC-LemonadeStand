@@ -13,7 +13,7 @@ namespace LemonadeStand
     public List<Inventory> inventories;
     public List<Weather> weathers;
 
-    public void RunGame()
+    public bool RunGame()
     {
       UI.DisplayTitleScreen();
       UI.DisplayLore();
@@ -25,25 +25,24 @@ namespace LemonadeStand
       UI.DisplayCompleteWeatherForecast(weathers);
       for (byte i = 0; i < numberOfDays; i++)
       {
-        inventories.Add(player.inventory);
-        days[i].RunDay(player, weathers[i]);
-        UI.DisplayResults(inventories[i], player.inventory, inventoryDifference(inventories[i], player.inventory));
-        if(i + 1 < numberOfDays)
+        inventories.Add(new Inventory(player.inventory));
+        if (i + 1 < numberOfDays)
         {
           UI.DisplayWeatherForTomorrow(weathers[i + 1]);
         }
+        days[i].RunDay(player, weathers[i]);
+        UI.DisplayResults(inventories[i], player.inventory, InventoryDifference(inventories[i], player.inventory));
       }
-      
-      //TODO: Display final results
-      //Ask if user wants to play again
+      UI.DisplayResults(inventories[0], player.inventory, InventoryDifference(inventories[0], player.inventory));
+      return UI.DoesUserWantTo("keep playing");
     }
-    public Inventory inventoryDifference(Inventory startingInventory, Inventory endingInventory)
+    public Inventory InventoryDifference(Inventory startingInventory, Inventory endingInventory)
     {
       Inventory difference = new Inventory();
-      difference.money = startingInventory.money - endingInventory.money;
-      difference.cups = startingInventory.cups - endingInventory.cups;
-      difference.lemons = startingInventory.lemons - endingInventory.lemons;
-      difference.sugar = startingInventory.sugar - endingInventory.sugar;
+      difference.money = endingInventory.money - startingInventory.money;
+      difference.cups = endingInventory.cups - startingInventory.cups;
+      difference.lemons = endingInventory.lemons - startingInventory.lemons;
+      difference.sugar = endingInventory.sugar - startingInventory.sugar;
       return difference;
     }
     public void GenerateDaysAndWeathers()
